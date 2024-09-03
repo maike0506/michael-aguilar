@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento de CSS</title>
+    <style>
+        h1{ 
+            background-color: red;
+
+
+
+        }
+        @keyframes slide-right{
+           from{
+            transform:translateX(-100%);
+
+           }
+           to{
+            transform:translateX(0;);
+           }
+            
+        }
+        .titulo{
+
+        animation:slide-right 2s ease-in-out;
+        }
+        h3{
+            background-color: blueviolet;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        @keyframes slide-down{
+            from{
+                transform: translateY(-100%);
+            } to{
+                transform: translateY(0);
+            }
+
+        }
+           
+        .desplazamiento{
+            animation:slide-down 2s ease-in-out;
+        }
+       @keyframes rotate{
+        from{
+            transform: rotate(0deg)
+        } to{
+            transform: rotate(360deg)
+        }
+       }
+    .rotacion {
+        animation: rotate s linear infinite;
+    }
+
+    @keyframes color-change{
+        from{
+         backgroup-color: red;
+        } to{
+            background-color: yellow;
+        } 
+    }
+    .cambiar{
+        animation: color-change 2s infinite;
+    }
+    
+@keyframes scale-up {
+    from{
+        transform: scale(1);
+    } to{
+        transform: scale(1.5);
+    }
+}
+
+.escala {
+    animation: scale-up 3s ease-in-out;
+}
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
+.transparencia{
+    animation: fade-in 3s ease-in;
+}
+@keyframes bounce {
+    0%,20%,50%,80%,100%{
+        transform: translateY(0)
+    }40%{
+        transform:translateY(-30px)
+    } 60%{
+        transform: translateY(-15px);
+    }
+   
+    
+
+}
+.dificil{
+    animation: bounce 3s infinite ;
+}
+    </style>
+</head>
+<body>
+    <h1 class="titulo">tipos de animaciones</h1>
+    <article>
+        <section>
+            <h4>desplazamiento horizontal</h4>
+          <code>
+            @keyframes slide-right { <br>
+                from { <br>
+                  transform: translateX(-100%); <br>
+                } <br>
+                to { <br>
+                  transform: translateX(0); <br>
+                } <br>
+              } <br>
+              
+              .element { <br>
+                 animation: slide-right 2s ease-in-out; <br>
+              } <br>
+</section>
+          </code>
+</article>
+<article>
+    <section>
+        <h3 class="desplazamiento">desplazamiento vertical</h3>
+        <code>
+            @keyframes slide-down { <br>
+                from { <br>
+                     transform: translateY(-100%); <br>
+                to {  <br>
+                  transform: translateY(0); <br>
+                } <br>
+              } <br>
+              
+              .element { <br> 
+                animation: slide-down 2s ease-in-out; <br>
+              } 
+        </code>
+           
+    </section>
+</article>
+<article>
+    <section>
+        <h3 class="rotacion">rotacion</h3>
+       <code>
+        @keyframes rotate { <br>
+            from { <br>
+              transform: rotate(0deg); <br>
+            } <br> 
+            to { <br>
+              transform: rotate(360deg); <br>
+            } <br>
+          } <br>
+          
+          .element { <br>
+            animation: rotate 1s linear infinite; <br>
+          } <br>
+          
+       </code>
+    </section>
+</article>
+<article>
+    <section>
+        <h3 class="cambiar">cambiar color</h3> <br>
+        <code>
+            @keyframes color-change { <br>
+                from { <br>
+                  background-color: red; <br>
+                } <br>
+                to {  <br>
+                  background-color: blue; <br>
+                } <br>
+              } <br>
+              
+              .element { <br>
+                animation: color-change 3s infinite; <br>
+              } <br>
+        </code>
+    </section>
+</article>
+<article>
+    <section>
+     <h3 class="escala">escala1</h3>
+    <code>
+        @keyframes scale-up { <br>
+            from { <br>
+              transform: scale(1); <br>
+            } <br>
+            to { <br>
+              transform: scale(1.5); <br>
+            } <br>
+          } <br>
+          
+          .element { <br>
+             animation: scale-up 1s ease-in-out; <br> 
+          } <br>
+          
+    </code>
+    </section>
+</article>
+<article>
+    <section>
+    <h3 class="transparencia">transperencia</h3>
+   <code>
+    @keyframes fade-in { <br>
+        from { <br> 
+          opacity: 0; <br>
+        } <br>
+        to { <br>
+          opacity: 1; <br>
+        } <br>
+      } <br>
+      
+      .element { <br>
+        animation: fade-in 2s ease-in; <br>
+      } <br>
+      
+   </code>
+    </section>
+</article>
+<article>
+    <section>
+ <h3 class="dificil">movimiento rebote</h3>
+ <code>
+    @keyframes bounce { <br>
+        0%, 20%, 50%, 80%, 100% { <br>
+      transform: translateY(0); <br>
+        } <br>
+        40% { <br>
+          transform: translateY(-30px); <br>
+        } <br>
+        60% { <br>
+          transform: translateY(-15px); <br>
+        } <br>
+      } <br>
+      
+      .element { <br>
+        animation: bounce 2s infinite; <br>
+      } <br>
+ </code>
+  
+
+    </section>
+</article>
+</body>
+</html>
