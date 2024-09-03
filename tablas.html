@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            background-color: yellowgreen;
+        }
+
+        col:nth-child(1) {
+            background-color: blueviolet;
+        }
+        span {
+            color: brown;
+        }
+        h2 {
+            background-color: yellowgreen;
+        }
+        h4{
+            background-color: darkcyan;
+        }
+        h5 {
+            background-color: darkorange;
+        }
+        h1
+        {
+         background-color: red;
+        }
+        h3 {
+            background-color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <h1>EJEMPLOS SOBRE  LAS TABLAS</h1>
+<h3>estructura basica de una tabla</h3> <br>
+<br>
+<br>
+<h1>TABLA</h1>
+<table>
+    <caption>HORARIOS DE CLASES</caption>
+    <colgroup>
+        <col span="5">  
+    </colgroup>
+    <thead>
+        <tr>
+            <th></th>
+            <th>L</th>
+            <th>M</th>
+            <th>X</th>
+            <th>J</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>8:30-9:30</td>
+        <td>Matematicas</td>    
+        <td>Lenguaje</td>
+        <td>Ingles</td>
+        <td>aleman</td>
+        </tr>
+    <tr>
+        <td>8:30-9:30</td>
+        <td>Sociales</td>    
+        <td>educa</td>
+        <td>Framces</td>
+        <td>aleman</td>
+    </tr>
+    <tr>
+        <td>8:30-9:30</td>
+        <td>aleman</td>    
+        <td>histrrae</td>
+        <td>guarani</td>
+        <td>tutoria</td>
+    </tr>
+    <tr>
+        <td>11122222</td>
+        <td colspan="5">recreo </td>
+        
+    </tr>
+    <tr>
+        <td>8:30-9:30</td>
+        <td>SOM</td>    
+        <td>Redes</td>
+        <td>Montaje</td>
+        <td>ofimatica</td>
+    </tr>
+    <tr>
+        <td>8:30-9:30</td>
+        <td rowspan="2">Matematicas</td>    
+        <td>Lenguaje</td>
+        <td>Ingles</td>
+        <td>Ingles</td>
+    </tr>
+    <tr>
+        <td>8:30-9:30</td> 
+        <td>Lenguaje</td>
+        <td>Ingles</td>
+        <td>Redes</td>
+    </tr>
+</tbody>
+<tfoot>
+    <tr>
+        <td colspan="4">total de asignaturas</td>
+        <td>12</td>
+    </tr>
+</tfoot>
+</table>
+
+<p>Con esto estamos construyendo el esqueleto de la tabla</p>
+<h2>ESTRUCTURA COMPLETA DE UA TABLA</h2>
+
+<p> los titulos de las tablas se establecen con la etiqueta "caption",es una etiqueta opcional, <br>
+y segun la especificacion esa etiqueta se coloca juesto despues de la etiqueta table <br>
+las cabeceras de las tablas se establecen con la etiqueta "thead" dentro tendremos una etiqueta <br>
+"tr" normal,pero en el caso de las celdas,las estableceremos con la etiqueta "th" en lugar de td <br>
+el contenido de la tabla debe ir dentro de una etiqueta  "tbody" para representar el cuerpo de la tabla <br>
+de forma opcional podemos colocar un tfoot a la tabla para establecer un pie de tabla, esto es algo que algunas <br>
+tablas tienen como suma de cantidades o total.ojo el "tbody"se utiliza cuando ponemos la cabezara  y la etiqueta tfoot se utiliza <br>
+se utiliza para poner un pie de pagina
+</P>
+<h3>atributos de las tablas</h3>
+<p>para hacer que las celdas ocupen mas de una fila o mas de una columna tenemos 2 atributos: <br>
+    -rowspan:sirve para que una celda ocupe mas de una fila,el valor por defecto es 1 <br>
+    colspan: sirve para que una celda ocupe mas de una columna, el valor por defecto es 1
+-un de ejemplo de rowspan con la tabla seria digamos que el de som falta el lunes las dos ultimas horas pues ponemos rowspan para que se una
+</p>
+<h4>PARA SELECCIONAR UNA COLUMNA</h4>
+<p>para ello tenemos la etiqueta colgroup,que nos permita seleccionar una columna en concreto dentro pondremos tantas etiquetas <br>
+"col" como columnas tengamos,cada etiqueta col equivaldria a una columna siguiendo el mismo orden que tienen en la tabla <br>
+si necesitamos que una etiqueta col agrupe mas de una columna,tenemos el atributo span,que funciona exactamente igual que rowspan y colspan
+"col"nos sirve mas para  dar estilo en css por ejemplo en este caso para conbinar colores en la tabla
+</p>
+<h2>COMO NO DAR ESTILOS A LS TABLAS</h2>
+    <P>Nunca dar estilo en nuestro archivo de html</P>
+<h2>ETIQUETAS IMPORTANTES DE BLOQUE</h2>
+<br>
+<br>
+<h3>address</h3>
+<p>se utiliza para aportar informacion de contacto para el article mas cercano o para todo el body</p>
+
+<h4>EJEMPLO DE ADDRESS</h4>
+<address>
+    tony stark <br>
+    malibu 1023020 <br>
+    55959 <br>
+    california <br>
+</address>
+
+<h3>blockquote</h3>
+<p>se utiliza para marcar las citas a otros autores  o dumentos <br>
+se puede incluir el atributo cite para poner un enlace al documento original o fuente
+</p>
+<h4>EJEMPLO</h4>
+ <blockquote cite="https://www.interflora.es/blog/cultivar-y-cuidar-claveles-en-maceta/">
+    <p>El clavel es una planta mediterránea cuyo nombre científico es Dianthus caryophyllus, que quiere decir <br>
+         «flores del amor o flores de los dioses”. Por eso, los cuidados de los claveles en maceta <br>
+        tienen mucho que ver con el carácter mediterráneo y soleado de esta planta alegre y elegante. <br>
+        El clavel es una planta perenne con una base leñosa que florece a finales de la primavera y durante <br>
+         todo el verano. Si las cuidas bien, las flores del clavel pueden resistir hasta tres semanas florecidas.
+        Los claveles pueden alcanzar más de 1 metro de altura, según la variedad. No obstante, la media de crecimiento <br>
+         suele estar en torno a los 0,5 metros.
+        </p>
+       <br>
+       <br>
+       <br>
+        <p>el atributo cite mas para darle la informacion al navegador  no es inportante ponerlo</p>
+ </blockquote>
+
+
+
+
+<h3>pre</h3>
+<p>se utiliza para tener codigo preformateado que necesita ser representado igual que se escribio</p>
+<h4>EJEMPLO</h4>
+ <pre>
+        hora            horizontal 
+ </pre>
+
+
+<h3>div</h3>
+<p>se usa como division del documento semanticamente no significa nada,es un contenedor generico que se usa generalmene para dar estilos a traves de css o para usar algo denominado <br>
+}"delegacion de eventos"en javacript en pocas palabra se usa para dividir contenido
+</p>
+<h4>EJEMPLO</h4>
+<div>
+    <h2>nombre</h2>
+    <p>email</p>
+    <p>descripcion =
+    </p>
+</div>
+<h3>hr</h3>
+<p>horizontal rule, se utiliza para decirle al navegador que vamos a cambiar de tema</p>
+ <hr>
+
+ <h3>ETIQUETAS IMPORTANTES DE LINEA</h3>
+  <br>
+  <br>
+
+  <h4>span</h4>
+  <p>es un contenedor de linea equivalente a div se suele usar para encerrar palabras o peque;os textos y darles estilo a traves de css <br>
+   o localizarlos desde javascript semanticamente no significa navegador</p>
+
+   <h3>EJEMPLO DE SPAN</h3>
+   <p>lorem ipsum dolor sit amet consectetur <span>adipisicing elit soluta nam voluptautm neque</span> omnis commodi molestiae vitae impedit id</p>
+  <p><span>OJO HAY QUE CONVINARLO CON CSS</span></p>
+        
+<h4>q</h4>
+<p>Es el equivalente a blockquote,significa quote por eso el de bloque se llama block - quote. sirve para poner citas pero en linea</p>
+ <h5>EJEMPLO DE q</h5>
+<q>yo soy Iron Man</q>
+<br>
+<br>
+<h4>code</h4>
+<p>sirve para encerrar codigo que queremos repredentar visualmente,suele ir unido con la etiqueta pre </p>
+ <br>
+ <h5>EJEMPLO DE code</h5>
+  <pre>
+     <code> 
+            &#60;pre&#62;
+            &#60;code&#62;
+                       aquiescribimos nuestro codigo  
+                       
+                &#60;code&#62;
+        &#60; pre&#62;
+                
+     </code>
+  </pre>
+   <p> para representar el codigo con los signos de igual y mayor se uso la tabla ascii </p>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

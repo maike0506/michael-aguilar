@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parrafo-1{
+            color: red;
+
+        }
+          
+        
+    </style>
+</head>
+<body>
+    <h1 class="parrafo-1">HTML APUNTES</h1>
+    <h3>enlaces </h3>
+    <p>conocidos tambien por links popularmente su objetivo es conectar una pagina web con otra pagina web,con un recurso tanto interno como externo , o con otro sito web <br>
+    tienen el atributo abligatorio href,donde la especificamos la ruta del recurso o sitio que queremos obtener<br>
+    tambien tiene el atributo target, que configura como queremos visualizar el recurso o sitio que solicitamos</p>
+    <h3>Diferencias entre rutas absolutas y rutas relativas</h3>
+    <h4>rutas absolutas</h4>
+    tiene un proto,http o https y son unicas en la red se suelen utilizar para rutas externas
+   <h5>ejemplo</h5>
+   <p>un ejemplo practico seria el siguiente
+    <a href="https:google.com">ir a google</a> <br>
+    en este tipo de rutas es obligatorio indicar el protocolo porque si no lo indicamos nos apareceria error <br>
+    pero en el caso que  nuestro enlace este dentro
+   </p>
+
+    <h4>rutas relativas</h4>
+    <p>pueden ser relativas al punto donde nos encontramos relativas a la raiz del proyecto <br>
+        -no usan un protocolo <br>
+        si el recurso se encuentra al mismo nivel en la misma carpeta pondremos unicamente el nombre del archivo <br>
+        si necesitamos salir de la carpeta actual usaremos ../ y se pone uno por cada nivel carpeta de la que queremos salir.
+ </p>
+ <h5>ejemplo</h5>
+ <a href="/login/axel.html">ir a home</a>
+ <h3>atributos que podemos incluir en los enlaces</h3>
+ <h5>target</h5>
+ <p>define donde se abrira el recurs solicitado por norma general siempre que <br>
+    useis rutas absolutas pondreis como valor "_blank" el valor por defecto es  "_self"</p>
+ <h6>ejemplo</h6>
+ <p>
+    <a href="https:google.com"target=_blank>ir a google</a>
+lo que hace el target es que la pestana donde esta nuestro documento no lo elimina si no que la lo deja y abre otra pestana para abrir google
+ </p>
+ <h5>download</h5>
+  <p>atrito boleano,sirve para descargar el recurso solicitado. IMPORTANTE, el recurso debe estar en tu mismo sercidor</p>
+  <h6>ejemplo</h6>
+  <p>
+     <a href="/login/axel.html"download>ir a home </a>
+     siempre que queremas descargar algo tenemos que tenerlo dentro de nuestro servidor si no se descargara por ejemplo si introducimos <br>
+     url de un gato  no se descargara por que no esta en nuestro servidor
+     -EL MODO PARA DESCARGAR SERIA EL siguiente
+     -primero tendremos que crear una carpeta assets  por que aqui es donde se guardan las imagenes,videos,musicas  y dentro de esta carpeta <br>
+     descargaremos la imagen  y para que se descargue con la url pondremos la siguiente sintaxis
+     <a href="/login/assets/victoria3.jpeg">descargar victoria</a></p>
+     <h3>navegacion por anclas</h3>
+     <p>utilizamos la etiqueta de nav</p>
+      <p> ejemplo en el siguiente enlace <br>
+        <a href="/login/axel.html">ejemplo de la etiqueta nav</a>
+    en la etiqueta nav puedes anadirle la ruta para que se vea en el inicio  como en las anteriores practicas
+    </p>
+    <h3>Introducion a las listas</h3>
+    <p>
+        las listas e HTML sirven para listar contenido.En funcion del tipo de contenido de nuestra lista tenemos tres tipos de lista; </p>
+    <h5>ul</h5>
+    <p>unordered list:se utilizan cuando el orden de los elementos no influye ejemplo kista de la compra</p>
+    <h5>ol</h5> 
+     <p>ordered list:se utilizan cuando el orden de los elementos es importante</p>
+     <h5>dl</h5>
+     <p>definition list:se utilizan para hacer una lista de definiciones ejemplo diccionario <br>
+        cada element de una lista de definicion lleva 2 etiquetas:
+        -dt=definition term:el termino que vamos a definir
+        -dd=definition description:la descripcion del termino
+    </p>
+     <p>aqui esta el enlace sobre la teoria de las listas
+
+     <a href="/login/listas.html">ir a listas</a>
+     </p>
+     <h2>TABLAS</h2>
+     <p>las tablas en HTML sirven para mostrar contenido tabulado
+        -la estructura basica de una tabla se compone de <br>
+        table= etiqueta que encierra una tabla <br>
+        tr=table row,etiqueta que construya una fila <br>
+        td=tabla data,etiqueta que construye una celda. <br>
+        
+        truco:el numero de celdas dentro de un td establecera el numero de columnas de la tabla
+        <a href="/login/tablas.html">ir a tablas</a> <br>
+        enlace hacia el documentacion sobre los ejemplos de las tablas y tambien sobre un poco de teoria
+     </p>
+
+</body>
+</html>
+
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    label 
+    </style>
+</head>
+<body>
+    <h1>INTRODUCION A FORMULARIOS</h1>
+    <h2>ESTRUTURA BASICA DE UN FORMULARIO</h2>
+    <P> la estructura basica de un formulario se compone de 4 elementos:
+        -form:es la etiqueta que engloba nuestro formulario
+        -label:sirve para escribir el nombre del campo a rellenar
+        -input:sirve para crear un campo que permitira al usuario interactuar
+        -button:crea un boton que permitira enviar el formulario
+    </P>
+    <h2>EJEMPLO CREAR UN FORMULARIO BASICO</h2>
+    <form>
+        <label for="nombre">nombre</label>
+        <input type="text"> <br>
+        <label for="email">email</label>
+        <input type="email"><br>
+        <button>enviar formulario</button>
+   
+
+</form>
+   <p>el <code>&#60 for action= "donde queremos que se envie el formulari"&#62</code> </p>
+
+<h2>ASOCIAR INPUT Y LABEL</h2>
+ <br>
+ <br>
+ <h3>EJEMPLO DE COMO ASOCIAR UN INPUT Y LABEL</h3>
+    <code>
+        &#60form&#62 <br>
+        &#60label for="name" label&#62 <br>
+        &#60input id="name"&#62 <br>
+        &#60 button&#62 enviar formulario  /button&#62
+        </code>
+    <h3>BUTTON VS TYPE BUTTON</h3>
+     <h4>TIPOS DE INPUT TYPE QUE EXISTEN</h4>
+      =button:se comporta igual que un boton
+      =color se utiliza para especificar un color
+      =date se utiliza para introduci una fecha
+      =datetime obsoleto
+      -datetime-local fecha y jora  no funciona en firefox
+      -email se utiliza  para introducir un mes
+      -hidden campo oculto  puede contener valor pero no se monstrara
+      -month se utiliza para introducir un mes
+      -number se utiliza para valores numericos
+      -password se utiliza para contrasenas
+      -range se utiliza para establecer un rango
+      -reset  se utiliza para resetear el formulario
+      -search se utiliza para las barras de busqueda
+      -submit se utiliza para enviar el formulario
+      -tel se utiliza para introducir numeros telefonicos
+      =text valor por defecto
+      -time se utiliza para introducir una hora
+      -url se utiliza para introducir urls
+      -week se utiliza para introducir el numero de semana del ano 
+      
+ <h5>diferencias entre input button y button</h5>
+ <code>
+        &#60input& type=button value="enviar input"&#62  <p>este tipo de boton  no envia en formulario es para que haga algun tipo de accion de javascrip</p> <br>
+        &#60 button=enviar&#62/button <p>este si enviar= el formulario </p>
+        &#60input type=submit value=enviar&#62/button <p>este se utiliza para enviar el formulario</p>
+        
+        </code>
+    <h2>input para fechas</h2>
+       <p> primero tenemos 
+          <code>
+            &#60input type=date&#62 se utiliza para fechas aparece en el navegador como un calendario
+            &#60input type=datetime-local &#62 es lo mismo que el anterior pero en este caso incluye la hora y minuto "OJO ESTO SOLO FUNCIONA EL NAVEGADOR DE GOOGLE O FIREFOX"
+            &#60input type=date&#62 en este caso tengo que utiliza los dos input uno date y el otro time para que funcione en el navegador de microsof
+            &#60input type=time&#62  """"""""
+            </code>
+        </p>
+<h2>input pare mes</h2>
+<code>
+    &#60input type=month&#62
+    </code>
+<h2>para semanas</h2>
+<code>
+    &#60input type=week&#62
+    </code>
+<h2>inputs para moviles</h2>
+ <code>
+    
+    &#60label&#62 search
+         &#60input type="search"&#62
+         &#60input label /&#62
+   
+         &#60label&#62 telefono
+         &#60input type="tel"&#62
+         &#60input label /&#62
+
+
+         &#60label&#62 password
+         &#60input type="password"&#62
+         &#60input label /&#62
+
+
+         &#60label&#62 url
+         &#60input type="url"&#62
+         &#60input label /&#62
+
+         <p>utilizamos la etiqueta"div" en cada cajita para que aparezcan en linea</p>
+ </code>
+<h2>INPUTS EXTRA</h2>
+ <code>
+    
+         &#60input type="color"&#62 <p>nos permite ver la plantilla de colores</p>
+         &#60input type="namer"&#62 <p>nos sirve para numeros con flechitas</p>
+         &#60input type="range" step=10&#62  <p>crea una barra para selecionar el rango de algo y el atributo step deterina de cuanto en cuanto se tiene que mover la barra tabien tiene los atributos min y max </p>
+         &#60input type="reset"&#62  <p>se utiliza para resetear texto se utiliza mas en formularios</p>
+         &#60input type="text"&#62 
+    
+    </code>
+
+<h2>inputs radio</h2>
+<p>redio+=permite seleccionar una unica opcion de una lista de opciones relacionadas <br>
+    checkbox=permite seleccionar varias opciones de una lista de ipciones relacionadas <br>
+    select=crea una lista de opciones donde podemos seleccionar una o varias opciones <br>
+    cada opcion ira dentro de una etiqueta &#60input option&#62   &#60input option/&#62 <br>
+     si tenemos muchas opciones podemos ordenarlas por categorias a traves de la etiqueta &#60 optgroup &#62 con el atributo label para nombrar la categorias <br>
+<code>
+    &#60 form &#62 <br>
+    &#60 h2&#62 generico &#60/h2 &#62 <br>
+     &#60 input label>masculino &#60/label&#62 <br>
+     &#60 input input type="radio" name="gener" value="masculino" checkbox &#62 <br>
+     &#60 input label for="femenino"#62femenino &#60/label&#62 <br>
+     &#60 input type="radio" name="gener" value="femenino"&#62  <br>
+     &#60 input label for="desconocido"&#62 desconocido &#60/label&#62 <br>
+     &#60 input type="radio" name="gener" value="desconocido"&#62 <br>
+     &#60/form&#62
+     </code>
+     <h6>EXPLICACION DEL CODIGO</h6>
+     <p> el atributo radio es para seleccionar una opcion y aparece en formato de circulo   y viene con el atributo name aqui le decimos <br>
+        al navegador que los tres input pertenecen a la misma categorio que es el generico basicamente nos permite seleccionar una unica opcion <br>
+        y no varias  y el values es el nombre del grupo que pertenece y el checked viene seleccionado de forma automatica  <br></p>
+        &#60 h5>INPUT checkbox&#60/h5&#62 <br>
+        &#60 h2>EJEMPLO DE checkbox&#60/h2&#62 <br>
+        &#60 label&#62 <br>
+                    HTML <br>
+           &#60 input type="checkbox"  name="ejemplo" value="HTML"&#62 <br>
+           &#60 /label&#62 <br>
+           &#60 label&#62  
+                CSS <br>
+           &#60 input type="checkbox" name="ejemplo" value="CSS"&#62 <br>
+           &#60 /label&#62  <br>
+           &#60 label&#62    <br>
+           Javascrip <br>
+           &#60 input type="checkbox" name="ejemplo" value="javacript"&#62 <br>
+           &#60 /label&#62   <br>
+     
+           <p>esto es valido para tipos checkbox no para tipos input radio </p>
+ <h5>ELEMENTO SELECT BASICO </h5>
+ <code>
+&lt;h6&gt;EJEMPLO DE SELECT&lt;/h6&gt;<br>
+&lt;form&gt;<br>
+  &lt;select name=&quot;ejemplo&quot; multiple&gt;<br>
+    &lt;option value=&quot;html&quot;&gt;HTML&lt;/option&gt;<br>
+    &lt;option value=&quot;css&quot;&gt;CSS&lt;/option&gt;<br>
+    &lt;option value=&quot;javascript&quot;&gt;JavaScript&lt;/option&gt;<br>
+  &lt;/select&gt;<br>
+&lt;/form&gt;
+</code>
+<p> el atributo multiple se utiliza para  elegir multiples opciones</p>
+
+<h3>ELEMENTO SELECT AVANZADO</h3>
+  <h5>EJEMPLO DE SELECT CON MUCHAS MAS OPCIONES</h5>
+<form>
+  <select name="animales">
+    <option value="loro">Loro</option>
+    <option value="perro">Perro</option>
+    <option value="gato">Gato</option>
+    <option value="elefante">Elefante</option>
+    <option value="tigre">Tigre</option>
+    <option value="caballo">Caballo</
+
+        
+        
+        
+        </select>
+    
+    
+    
+    
+    </form>
+  
+  
+
+    
+
+
+ </body>
+</html>
