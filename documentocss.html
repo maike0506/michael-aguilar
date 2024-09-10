@@ -242,8 +242,89 @@
       } <br>
  </code>
   
-
-    </section>
+ </section>
 </article>
+<h5>TIPOS DE ATRIBUTOS</h5> 
+ <ul>
+  <li>id</li>
+   <li>class</li>
+   <li>seudo clases</li>
+   
+ </ul>
+<h2>tamano</h2>
+  <h5>width </h5>
+  <p>esta propiedad de clara el ancho de un elemento el valor se puede especificaar en pixeles porcentaje, o con la palabra auto </p>
+  <h5>height</h5>
+  <p>esta propiedad declara la altura de un elemeneto  """""""""""</p>
+  <h5>overflow</h5>
+  <p>esta propiedad especifica como se mostrarar el contenido que desborda el elmento los valores disponibles son <b>visible</b>,<b>hidden</b> contenido que no entra dentro de la caja 
+  <b>scroll</b> muestra barras laterales para desplazare el contenido <b>auto</b>deja que el navegador decida que hacer con el contenido </p>
+   <h5>overflow-x</h5>
+   <p>esta proidad especifica como se mostrar el contenido que desborda el elemento horizpontalmente acepta los mismo valores que la propiedad <b>overflow</b></p>
+   <h5>overflow-5</h5>
+   <p>esta poriedad especifica como se mostrar el contenido que desborda el elemento vcerticalmente acepta los mismo valores que la poriedad <b>overflow</b></p>
+   <h5>overflow-wrap</h5>
+   <p>esta poriedad indica si una palabra deberia ser dividida en un punto arbitrario cuando no hay suficiente espacio para mostrarla en la linea los valores disponibles son <b>normal</b>
+    la linea sera divida naturalmente y <b>break-word</b> las palabras se dividiran en puntos arbitrarios para acomodar la linea de texto en el espacio disponible</p>
+   <p><b>CON ESTAS PROPIEDADES PODEMOS DETERMINANR COMO SE MOSTRARA EL CONTENIDO CUANDO  NO HAY SUFICIENTE ESPACIO DISPONIBLE </b> por ejemplo podemos ocultar el texto que desborda el 
+  elemento asignado  el valor <b>hidden</b> a la propiedad <b>overflow</b></p>
+   <p>si queremos que el usuario pueda ver el texto que se ha ocultado, podemos asignar el valor <b>scroll</b> y forzar al navegador a mostrar barrras laterales para desplazar el contenido</p>
+   
+   <h5>MARGIN</h5>
+   <p>esta propiedad declara el margen de un elemento el margen es el espacio que hay alrededor de la caja   puede rebir <b>4 valores derecho,inferior e izquierdo </b>  
+  en ese orden y separados por un espacio tambien se puede utiliar el valor <b>auto</b>  </p>
+    
+  <h5>padding</h5>
+  <p>esta propiedad declara el relleno de un elemento el relleno es el espacio entre el contenido del elemento y los limites de su caja 
+    los valores se declaran  de la misma forma que lo hacemos para la propiedad margin</p>
+  <h5>background-color</h5>
+   <p>esta propiedad asigna un fondo de coor a un elemtento</p>
+   <h5>background-image</h5>
+   <p>esta poriedad asigna una o varias imagenes al fondo de un elemento  la URL del archivo se declara con la funcio <b>url</b>
+ si se quiere mas de una  imagen  se separa por una coma
+</p>
+  <h5>background-position</h5>
+  <p>esta pro[iedad declara la posicon de comienzo de una imagen de fondo los valores se pueden especificar en procentaje, pixeles o usando
+    una combinacion de las palabra <b>center,left,right,top y bottom</b>
+  </p>
+  <h5>background-size</h5>
+  <p>esta propiedad delcara el tama;o de la imagen de fondo  los valores se expresan en pixeles o porcentajes o utilizando paralabra claves
+    como oover y contain  <b>cover</b> expande la imagen hasta que su ancho o su altura cubren el area del elemento <b>contain</b>estira la imagen para 
+    ocupar toda el area del elemento
+  </p>
+  <h5>background-repeat</h5>
+  <p>esta propiedad determina como se distribuye la image n de fondo usando cuatro palabras clave <b>repeat,repeat-x,no-repeat</b>la palabra
+  repeat  repide la imagen en el eje vertical y horizontal  y el x y y lo hacen solo en el eje horizontal o vertical </p>
+
+  <h5>background-origin</h5>
+  <p>esta propiedd determina si la imgen de fondo se posicionara considerando el borde, el relleno o el contenido del area del elemento los valores disponibles son  <b>border-box, 
+    paddig-box y content-box
+  </b></p>
+
+  <h5>background-clip</h5>
+  <p>esta propiedad declara el area a cubir por el fondo usando los valores <b>border-box. padding-box y content-box</b>el primer valor corta la imagen al borde de la caja del elemento 
+   el segundo  corta el relleno de la caja y el tercero corta la imagen del alrededor</p>
+   <h5>background-attachment</h5>
+   <p>esta proiedad determinan si la imagen es estatica o se desplaza con el  resto de los elemenesto susando dos valores <b>scroll y fired</b> el scroll 
+  hacfe  que la imegen se desplace con la pagina  y el fixed fija la imagen de fondo  en su lugar original</p>
+
+  <h5>background</h5>
+  <p>esta propiedad nos permite declara todos los atributos del fondo al mismo tiempo</p>
+
+ <h3>BORDES</h3>
+  <p>por defecto los navegadores no muestran ningun borde, pero podemos usar las siguientes porpiedades para definirlo</p>
+   <h5>border-width</h5>
+   <p>esta propiedad define el ancho del borde acepta cuatro valores por defecto <b>border-top-width , border-bootom-width , border-left-width y border-right-width</b></p>
+ <h5>border-style</h5>
+ <p>esta propiedes define el estili del borde acepta cuatro valores  <b>todos lo valores que voy diciendo van en el siguiente orden que es
+  el superior,derecho,inferio e izquierdo en ese orden </b> los valores son los siguientes <b>none,hidden,dotted,dashed,solid,double,groove,ridge,inset y outset</b>el valor 
+por defecto es <b>none</b> lo que significa que no se mostrara a menos que le mostremos algun valor se puede asignar los valores de forma independiente 
+ <b>border-top-style , border-botton-style  , border-left-style y border-right-style-</b></p>
+<h5>border-color</h5>
+<p>esta propiedad define el color del borde y va acompanado con los anteriores valores por ejemplo <b>border-top-color</b>
+</p>
+
+
+
 </body>
 </html>
