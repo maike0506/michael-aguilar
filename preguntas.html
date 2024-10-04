@@ -317,7 +317,7 @@
     o.onclick=function(){
     
          let name=prompt("PROTECCION ELECTRONICA")
-         let respond=promp("se refiere a sistemas de deteccion de robos,intrusion,asatos o incendios mediante sensores conectados a centrales de alarma.los sensores detectan situciones de riesgo y activan las alarmas \n \n  -barreras infrarojas y mircroondas:detentan interrupciones en haces de luz o microondas activando la alarma  \n detector ultrasonico:utiliza ultrasonido spara detectar movimientos dentro de un espacion protegido \n -detectores pasivos sin alimentacion:no requieren de energia adicional y se conectan a la centra de alarmas para enviar informacion de control \n  ")
+         let respond=promp("se refiere a sistemas de deteccion de robos,intrusion,asatos o incendios mediante sensores conectados a centrales de alarma.los sensores detectan situciones de riesgo y activan las alarmas \n \n  -barreras infrarojas y mircroondas:detentan interrupciones en haces de luz o microondas activando la alarma  \n detector ultrasonico:utiliza ultrasonido spara detectar movimientos dentro de un espacion protegido \n -detectores pasivos sin alimentacion:no requieren de energia adicional y se conectan a la centra de alarmas para enviar informacion de control \n -sonorizacion y dispositivos luminossos:sirenas,campanas,luces  rotativa y otros dispositivos visuales o auditvos alertan sobre situciones de emergencia \n -circuitos cerrados de telvision: permiten monitorear todo lo que sucede en el lugar con camaras visibles o ocultas ")
 
      if(respond === OPTION_o){
         alert("bien")
@@ -347,9 +347,9 @@
   
     p.onclick=function(){
     
-         let name=prompt("")
-
-     if(name === OPTION_p){
+         let name=prompt("SEGURIDAD LOGICA")
+         let respond=prompt("la seguridad logica protege el acceso a lso datos,permitiendo acceso solo apersonas autorizadas el principio fundamental es.todo lo  que esta permitido debe esta prohibido \n -retringir el acceso a programas y archivos \n  -asegurar que los operadores no modifiquen programas o archivos incorrectos \n  garantizar el uso correcto de los datos y programas \n  transmitir informacion de manera segura y correcta \n  desponer de sistemas alternativos y planes de emergencia para la transmision de informacion ")
+     if(respond === OPTION_p){
         alert("bien")
      }else{
         alert("mal")
@@ -368,9 +368,10 @@
   
     q.onclick=function(){
     
-         let name=prompt("")
+         let name=prompt("controles de acceso")
+         let respond=prompt("lso controles de acceso pueden implementarse en diferentes niveles como el sistema iperativo, aplicaciones o bases de datos y sirven para \n  -proteger el sistema de uso no autorizado \n  - mantener la integridad y confidencialidad de la informacion ")
 
-     if(name === OPTION_q){
+     if(respond === OPTION_q){
         alert("bien")
      }else{
         alert("mal")
@@ -391,9 +392,10 @@
   
     r.onclick=function(){
     
-         let name=prompt("")
+         let name=prompt("identificacion y autentificacion")
+         let respond("la identificacion y autentificacion son la primera linea de degensa de un sistema se utilizan varias tecnicas para garantizar la autentificacion \n -algo que el usuario sabe> por ejemplo una contrasena o pin \n  -algo que le usuaario posee:como una  tarjeta magnetica \n  -algo que el usuairo es: como huellas digitales o recoonocimiento de voz \n  -algo que el usuario puede hacer: como patrones de escritura ")
 
-     if(name === OPTION_r){
+     if(respond === OPTION_r){
         alert("bien")
      }else{
         alert("mal")
@@ -415,9 +417,10 @@
   
     s.onclick=function(){
     
-         let name=prompt("")
+         let name=prompt("roles")
+         let respond=prompt("el accceso tambien puede controlarse por los roles que tiene los usuarios en el sistema como administrados programdeos o  gerente ")
 
-     if(name === OPTION_s){
+     if(respond === OPTION_s){
         alert("bien")
      }else{
         alert("mal")
@@ -425,10 +428,405 @@
 
     };
 
+ const t =document.querySelector(".t")
+ const OPTION_t = "2" 
+
+  t.onclick=function(){
+
+   let name=prompr("TRANSACCIONES")
+   let respond=prompt("El sistema puede tequerir una clave para autorizar una transaccion determinada implementando un coontrol basado en acciones especificas")
+if(respond === OPTION_t ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+  const u =document.querySelector(".u")
+ const OPTION_u = "2" 
+
+  u.onclick=function(){
+
+   let name=prompr("LIMITACIONES A LOS SERVICIOS")
+   let respond=prompt("estos controles restringen el uso de recursos dependiendo de factores como el numero de licencias disponibles o el nivel de acceso ")
+if(respond === OPTION_u ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+  const v =document.querySelector(".v")
+ const OPTION_v = "" 
+
+  v.onclick=function(){
+
+   let name=prompr("MODALIDAD DE ACCESO")
+   let respond=prompt("El acceso puede ser ; \n -lectura:solo permite visualizar la informacion \n escritura:permite agregar modificar o eliminar informacion \n ejecucion:permite ejecutar programas \n -borrado: permite eliminar recursos del sistema ")
+
+if(respond === OPTION_v ) {
+   alert("bien")
+}else{
+   alert("MAL")
+};
+   
+  }; 
+
+   const w =document.querySelector(".w")
+ const OPTION_w = "2" 
+
+  w.onclick=function(){
+
+   let name=prompr("UBICACCION Y HORARIO")
+   let respond=prompt("el acceso a recursos del sistema puede depender de la ubicacion fisica o logica de datos y personas Los controles de horario limitan el acceso de usuarios a cierta horas del dia o dias de la semana lo que permite un control mas restringido sobre usuarios y zonas de ingreso estos controles deben complementarse con otros mecanismos de seguridad")
+if(respond === OPTION_w ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  };  
+  
+  const x =document.querySelector(".x")
+ const OPTION_x = "2" 
+
+ x .onclick=function(){
+
+   let name=prompt("CONTROL DE ACCESO INTERNO - PALABRAS CLAVES PASSWAORDS")
+   let respond=prompt("las palabras clave se utilizan para autentificar usuarios y proteger datos y aplicaciones aunque son una solucion de bajo costo su afectividad puede verse comprometida  si los usuarios eligen passwords debiles o las anotan la eleccion de contraaseñas seguras es critica ya uq eentre el 90% y 99% de los problemas de seguridad estan relacionados con contraseñas inadecuadas")
+if(respond === OPTION_x ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+
+  const y =document.querySelector(".y")
+ const OPTION_y = "1" 
+
+  y.onclick=function(){
+
+   let name=prompr("SINCRONIZACION DE PASSWORDS")
+   let respond=prompt("permite que un usuario use la misma contraseña en diferentes sistemas aunque esto podria parecer un riesgo muchos usuarios tienden a utilizar una unica contraseña lo que puede ser mas peligros para implementarla todos los sistemas deben tener un alto nivel de seguridad")
+if(respond === OPTION_y ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const z =document.querySelector(".z")
+ const OPTION_z = "1" 
+
+  z.onclick=function(){
+
+   let name=prompr("CADUCIDAD Y CONTROL")
+   let respond=prompt("este mecanismo regula cuando los usurios deben cambiar sus contraseñas definiendo peridos minimos y maximos para su caducidad")
+if(respond === OPTION_z ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+
+  const aa =document.querySelector(".aa")
+ const OPTION_aa = "1" 
+
+  aa.onclick=function(){
+   let name=prompt("ENCRIPTACION")
+   let respond("la encriptacion permite que la informacion sea desencriptada solo por quienes posean la clave apropiada siendo uan medidad eficaz de control de acceso")
+if(respond === OPTION_aa){
+   alert("bien")
+}else{
+   alert("mal")
+};  
+
+
+};
+
+
+  const bb =document.querySelector(".bb")
+ const OPTION_bb = "2" 
+
+  .onclick=function(){
+
+   let name=prompr("ACCIONES HOSTILES - ROBO")
+   let respond=prompt("los equipos y la informacion pueden ser robados facilmente por lo que se deben implementar mediads de seguridad estrictas para evitar la copia no autorizada de soffware y datos")
+if(respond === OPTION_bb ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const cc =document.querySelector(".cc")
+ const OPTION_cc = "" 
+
+  cc.onclick=function(){
+
+   let name=prompr("ACCIONES HOSTILES - FRAUDE")
+   let respond=prompt("las computadoras son utilizadas en muchos casos para realizar fraudes sustratendo mullones de dolares de empresas cada año")
+if(respond === OPTION_cc ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const dd =document.querySelector(".dd")
+ const OPTION_dd = "" 
+
+  dd.onclick=function(){
+
+   let name=prompr("ACCIONES HOSTILES- SABOTAJE")
+   let respond=prompt("el sabotaje es una de las mauores amenazas en los centros de procesamiento herramientas como imanes o el ingreso de materiales contaminantes pueden destruir equipos y datos rapidamente")
+if(respond === OPTION_dd ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const ee =document.querySelector(".ee")
+ const OPTION_ee = "" 
+
+  ee.onclick=function(){
+
+   let name=prompr("CONTROL DE ACCESOS ")
+   let respond=prompt("el control de acceso no soolo implica identificacion sino tambien gesitionar la apertura y cierre de puertas permitiendo o denegando el acceso segun restricciones de tiempo y lugar")
+if(respond === OPTION_ee ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  };  
+  
+  const ff =document.querySelector(".ff")
+ const OPTION_ff = "" 
+
+  ff.onclick=function(){
+
+   let name=prompr("CONTROL DE ACCESO -UTILIZACION DE GUARDIAS")
+   let respond=prompt("SIN CONTENIDO")
+if(respond === OPTION_ff ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const gg =document.querySelector(".gg")
+ const OPTION_gg = "" 
+
+  gg.onclick=function(){
+
+   let name=prompr("UTILIZACION DE DETECTORES DE METALES")
+   let respond=prompt("son una herramienta eficaz para revisar personas evitando la palpacion manual su sensibilidad  es regulable y actuan como disuasivos")
+if(respond === OPTION_gg ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const hh =document.querySelector(".hh")
+ const OPTION_hh = "" 
+
+  hh.onclick=function(){
+
+   let name=prompr("UTILIZACION DE SISTEMAS BIOMETRICOS")
+   let respond=prompt("la biometria identifica a las personas por sus caracteristicas fisicas unicas como manos,ojos,huellas digitales y voz \n -emision de calor:mide el calor del cuerpo creando un mapa fisico \n -huella digiral: basado en que no existen dos huellas iguales es un metodo confiable de identificacion \n -verificacion de voz:compara la diccion de frases aunque es sensible a ruidos externos y condiciones del usuairo \n -verificacion de patrones oculares: identifica por el iris o la retina con alta precision aunque algunas personas son reacias a este metodo \n -verificacion automatica de firmas(VAF):analiza el proceso dinamico de firmar,utilizando patrones acusticos unicos")
+if(respond === OPTION_hh ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const ii =document.querySelector(".ii")
+ const OPTION_ii = "" 
+
+  ii.onclick=function(){
+
+   let name=prompr("METODOS")
+   let respond=prompt("los ataques pueden clasificarse en: \n -interrrupcion: corte en la prestacion del sercicio \n -interceptacion: acceso no autorizado a comunicaciones \n -modificacion:alteracion de informacion \n -fabricacion: suplantacionde identidad para obtener la infromacion")
+if(respond === OPTION_ii ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const jj =document.querySelector(".jj")
+ const OPTION_jj = "" 
+
+  jj.onclick=function(){
+
+   let name=prompr("TECNICAS")
+   let respond=prompt("entre las tecnicas utilizadas se encuantran \n -malware:software maliccioso para infiltrar sistemas \n -virus:codigo que infecta archivos y se desemina al ejecutarse \n -gusanos: programas que se replicacn y se propagan sin intervenxion del usuario \n -trayanos: abren puertas traseras para otros porgramas maliciosos \n - spyware:obtiene informacion sin el conocimiento del usuairo \n -adware:muestra publicidad y recopila datos del comprotamiento del usuario \n -ransomware:secuestra datos y pide un rescate  por ellos \n -ingenieria social: manipulacion para obtener informacion confidencial \n -phishing: suplantacion de identidad para robar credenciales \n -phishing: suplantacion de identidad para roobar credenciales \n -ketloggers:registran las ulsaciones de teclado \n -fuerza bruta:generacion de todads las combinaciones posibles de contraseña \n -spoofing: suplantacion de identidad en comunicaciones \n -sniffing: acceso a conversaciones al estar en la misma red \n -Dos: saturacion de un servidor con falsas peticiones \n -DDOS:ataques Dos desde multiples mauqinas \n -inyeccion SQL:infiltacion de codigo en aplicaciones para manipular bases de datos ")
+if(respond === OPTION_jj ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+
+  const kk =document.querySelector(".kk")
+ const OPTION_kk = "" 
+
+  kk.onclick=function(){
+
+   let name=prompr("TIPOS DE ATACANTES")
+   let respond=prompt("-hackers: buscan vulnerabilidades sin intencion maliciosa \n -crackers: rompen la seguridad con fines maliciosso \n sniffers: analizan trafico de red para extraer infromacion \n -lammers: jovenes sin experiencia que se hacen pasar por hackers \n -newbies:hackers novatos \n -ciberterroristas: espias o saboteadores informaticos \n -programadores de virus: crean sofware dañino \n -carders:especialisatas en ataques a sistemas de tarjetas")
+if(respond === OPTION_kk ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const =document.querySelector(".")
+ const OPTION_ = "" 
+
+  .onclick=function(){
+
+   let name=prompr("")
+   let respond=prompt("")
+if(respond === OPTION_ ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const =document.querySelector(".")
+ const OPTION_ = "" 
+
+  .onclick=function(){
+
+   let name=prompr("")
+   let respond=prompt("")
+if(respond === OPTION_ ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const =document.querySelector(".")
+ const OPTION_ = "" 
+
+  .onclick=function(){
+
+   let name=prompr("")
+   let respond=prompt("")
+if(respond === OPTION_ ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const =document.querySelector(".")
+ const OPTION_ = "" 
+
+  .onclick=function(){
+
+   let name=prompr("")
+   let respond=prompt("")
+if(respond === OPTION_ ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const =document.querySelector(".")
+ const OPTION_ = "" 
+
+  .onclick=function(){
+
+   let name=prompr("")
+   let respond=prompt("")
+if(respond === OPTION_ ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const =document.querySelector(".")
+ const OPTION_ = "" 
+
+  .onclick=function(){
+
+   let name=prompr("")
+   let respond=prompt("")
+if(respond === OPTION_ ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+
+  const =document.querySelector(".")
+ const OPTION_ = "" 
+
+  .onclick=function(){
+
+   let name=prompr("")
+   let respond=prompt("")
+if(respond === OPTION_ ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
+
+  const =document.querySelector(".")
+ const OPTION_ = "" 
+
+  .onclick=function(){
+
+   let name=prompr("")
+   let respond=prompt("")
+if(respond === OPTION_ ) {
+   alert("bien")
+}else{
+   alert("mal")
+};
+   
+  }; 
 
 
 
-    
+
+
+
 
 
 
