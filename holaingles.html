@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Traducción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Juego de Traducción</h1>
+<div class="question" id="question"></div>
+<div class="input-group">
+    <input type="text" id="answer" placeholder="Escribe tu respuesta aquí">
+    <button onclick="checkAnswer()">Comprobar</button>
+</div>
+<div class="result" id="result"></div>
+<button onclick="nextQuestion()">Siguiente</button>
+
+<script>
+    const words = [
+        { english: "if", spanish: "si" },
+        { english: "im", spanish: "soy" },
+        { english: "far", spanish: "lejos" },
+        { english: "sky", spanish: "cielo" },
+        { english: "comes", spanish: "llega" },
+        { english: "falling", spanish: "descendente" },
+        { english: "down", spanish: "abajo" },
+        { english: "theres", spanish: "hay" },
+        { english: "at", spanish: "en" },
+        { english: "to", spanish: "a" },
+        { english: "now", spanish: "ahora" },
+        { english: "off", spanish: "apagado" },
+        { english: "turn", spanish: "doblar" },
+        { english: "How", spanish: "como" },
+        { english: "often", spanish: "a menudo" },
+        { english: "touch", spanish: "tocar" },
+        { english: "arm", spanish: "brazo" },
+        { english: "dinner", spanish: "cena" },
+        { english: "whole", spanish: "entero" },
+        { english: "last", spanish: "última" },
+        { english: "week", spanish: "semana" },
+        { english: "for", spanish: "para" },
+        { english: "world", spanish: "mundo" },
+        { english: "nothing", spanish: "nada" },
+        { english: "in", spanish: "en" },
+        { english: "this", spanish: "esta" },
+        { english: "believe", spanish: "creer" },
+        { english: "still", spanish: "aun" },
+        { english: "another", spanish: "otras o otros" },
+        { english: "wonder", spanish: "preguntarse" },
+        { english: "wouldnt", spanish: "no lo haría" },
+        { english: "will", spanish: "voluntad" },
+        { english: "hear", spanish: "escuchar" },
+        { english: "call", spanish: "llamar" },
+        { english: "loose", spanish: "perder" },
+        { english: "it", spanish: "el" },
+        { english: "all", spanish: "toda" },
+        { english: "help", spanish: "ayuda" },
+        { english: "out", spanish: "afuera" },
+        { english: "an", spanish: "un" },
+        { english: "endless", spanish: "sin fin" },
+        { english: "roadto", spanish: "camino a" },
+        { english: "rediscover", spanish: "redescubrir" },
+        { english: "so", spanish: "entonces" },
+        { english: "water’s", spanish: "agua" },
+        { english: "sweet", spanish: "dulce" },
+        { english: "but", spanish: "pero" },
+        { english: "thicker", spanish: "más grueso" },
+        { english: "blood", spanish: "sangre" },
+        { english: "their", spanish: "su" },
+        { english: "following", spanish: "siguiente" },
+        { english: "duties", spanish: "deberes" },
+        { english: "someone", spanish: "alguien" },
+        { english: "look", spanish: "mirar" },
+        { english: "which", spanish: "cual" },
+        { english: "above", spanish: "arriba" },
+        { english: "think", spanish: "pensar" },
+        { english: "things", spanish: "cosas" },
+        { english: "our", spanish: "nuestro o nuestra" },
+        { english: "about", spanish: "acerca de" },
+        { english: "change", spanish: "cambiar" },
+        { english: "sign", spanish: "firmar" },
+        { english: "currently", spanish: "actualmente" },
+        { english: "hopefully", spanish: "con un poco de suerte" },
+        { english: "fill", spanish: "llenar" },
+        { english: "close", spanish: "cerca" },
+        { english: "arrive", spanish: "llegar" },
+        { english: "test", spanish: "prueba" },
+        { english: "review", spanish: "revisar" },
+        { english: "something", spanish: "algo" },
+        { english: "yourself", spanish: "tu mismo" },
+        { english: "both", spanish: "ambas" },
+        { english: "read", spanish: "leer" },
+        { english: "eat", spanish: "comer" },
+        { english: "play", spanish: "jugar" },
+        { english: "come", spanish: "venir" },
+        { english: "ask", spanish: "preguntar" },
+        { english: "go", spanish: "ir" },
+        { english: "get", spanish: "conseguir" },
+        { english: "find", spanish: "encontrar" },
+        { english: "make", spanish: "construir" },
+        { english: "feel", spanish: "sentir" },
+        { english: "work", spanish: "trabajar" },
+        { english: "think", spanish: "pensar" },
+        { english: "see", spanish: "ver" },
+        { english: "know", spanish: "saber" },
+        { english: "try", spanish: "intentar" },
+        { english: "use", spanish: "usar" },
+        { english: "take", spanish: "coger" },
+        { english: "want", spanish: "querer" },
+        { english: "look", spanish: "mirar" },
+        { english: "speak", spanish: "hablar" },
+        { english: "say", spanish: "decir" },
+        { english: "leave", spanish: "salir" },
+        { english: "give", spanish: "dar" },
+        { english: "run", spanish: "correr" },
+        { english: "walk", spanish: "andar" },
+        { english: "any", spanish: "cualquier" },
+        { english: "these", spanish: "estas o estos" },
+        { english: "Discuss", spanish: "conversar" },
+        { english: "suitable", spanish: "adecuado" },
+        { english: "bit dull", spanish: "un poco aburrido" }
+    ];
+
+    let currentWordIndex = 0;
+
+    function displayQuestion() {
+        const questionElement = document.getElementById('question');
+        questionElement.innerText = `Traduce al español: ${words[currentWordIndex].english}`;
+        document.getElementById('result').innerText = '';
+        document.getElementById('answer').value = '';
+    }
+
+    function checkAnswer() {
+        const answer = document.getElementById('answer').value.trim().toLowerCase();
+        const correctAnswer = words[currentWordIndex].spanish;
+
+        const resultElement = document.getElementById('result');
+        if (answer === correctAnswer) {
+            resultElement.innerText = '¡Correcto!';
+        } else {
+            resultElement.innerText = `Incorrecto. La respuesta correcta es: ${correctAnswer}`;
+        }
+    }
+
+    function nextQuestion() {
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+        displayQuestion();
+    }
+
+    // Iniciar el juego mostrando la primera pregunta
+    displayQuestion();
+</script>
+
+</body>
+</html>
